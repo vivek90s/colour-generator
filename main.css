@@ -1,0 +1,179 @@
+*
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;   
+}
+
+.color-container{
+   
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+ .color {
+
+    
+    display: flex;
+    flex: 25%;
+    transition: 0.3s linear;
+    min-height: 220px;
+    cursor: pointer;
+    position: relative;
+
+
+}
+
+.color:hover {
+
+    
+    transform: translateY(-2%);
+
+}
+
+.color button {
+
+    bottom: 20%;
+    position: absolute;
+   
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: whitesmoke;
+    background: #000;
+    justify-content: space-around;
+    border: none;
+    width: 50%;
+    height: 10%;
+    cursor: pointer;
+    border-radius: 10px 0px 10px 0px;
+    box-shadow: 3px 3px 1px 0px rgba( 0, 0 ,0 , 0.09) ;
+    margin-left: 20%;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+
+.refresh {
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 15px ;
+    color: rgb(233, 233, 233);
+    background-color: black;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s linear;
+}
+
+
+
+.refresh:hover {
+
+   transform: rotate(180deg);
+}
+
+.copied {
+
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: #000;
+    padding: 10px 25px;
+    min-width: 280px;
+    text-align: center;
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px 0 10px 0;
+    box-shadow: 5px 5px 3px 0px rgba( 0, 0 ,0 , 0.09) ;
+    font-size: 13px;
+    outline: none;
+
+    
+ }
+
+ /* ---------------- Responsive ---------------- */
+
+ @media screen and (max-width: 800px){
+     .color{
+         flex: 100%;
+     }
+
+     .color button {
+
+        width: 30%;
+        height: 25%;
+        margin-left: 40% ;
+        }
+     .copied {   
+         
+        min-width: 250px;
+        font-size: 10px;
+    
+     }
+ 
+ }
+
+ @media screen and (max-width: 425px){
+    
+    .color button {
+
+      font-size: 15px;
+      font-weight: 500;
+
+      
+
+    }
+    .copied {   
+         
+        min-width: 180px;
+        font-size: 9px;
+    
+     }
+     .refresh {
+
+        width: 35px;
+        height: 35px;
+        font-size: 13px;
+     }
+
+
+ }
+ @media screen and (max-width: 320px){
+    
+    .color button {
+
+      font-size: 10px;
+      height: 20vmin;
+
+    }
+ }
+
+ 
+@media (min-width: 1024px) {
+  nav button,
+  .responsive-nav {
+    display: none;
+  }
+  nav ul {
+    display: block;
+  }
+  .container {
+    padding: 2.5rem 10rem;
+  }
+  html {
+    font-size: 72.5%;
+  }
+}
+
+  /* ---------------- Responsive ends ---------------- */
