@@ -11,6 +11,7 @@
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
     
 }
 
@@ -98,9 +99,21 @@
     box-shadow: 5px 5px 3px 0px rgba( 0, 0 ,0 , 0.09) ;
     font-size: 13px;
     outline: none;
+    z-index: 10;
 
     
  }
+
+ /* ---------------- helper classes --------------*/
+ .show {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
 
  /* ---------------- Responsive ---------------- */
 
