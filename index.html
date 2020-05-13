@@ -43,7 +43,7 @@
         </div>
 
 
-        <button class="refresh ">
+        <button class="refresh " id="refresh">
             <i class="fas fa-sync-alt"></i>
         </button>
 
@@ -65,14 +65,14 @@
 
         //set random colours
 
-        $('.refresh').click(function () {
+    /*    $('.refresh').click(function () {
             $('.color').each(function () {
 
                 var rColor = '#' + Math.random().toString(16).substr(2, 6);
                 $(this).css('background-color', rColor);
                 $(this).children('.color-hex').text(rColor);
             });
-        }).trigger('click');
+        }).trigger('click'); */
 
 
         //copy to clipboard
@@ -91,7 +91,7 @@
 
 
     </script>
-
+    <script src="index.js"></script>
 </body>
 
 </html>
