@@ -1,0 +1,26 @@
+{
+    "name": "Colorify",
+    "short_name": "Colorify",
+    "icons": [
+        {
+            "src": "loop2.svg",
+            "sizes": "92x92",
+            "type": "image/svg"
+        },
+        {
+            "src": "loop2.svg",
+            "sizes": "144x144",
+            "type": "image/svg"
+        },
+        {
+            "src": "loop2.svg",
+            "sizes": "152x152",
+            "type": "image/svg"
+        }        
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#f0f2f5",
+    "theme_color": "#96f2d7"
+}
