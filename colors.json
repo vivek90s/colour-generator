@@ -1,0 +1,30 @@
+[
+    {
+        "id":0,
+        "color1": "#9C7627",
+        "color2": "#C9BA86",
+        "color3": "#E8E3CC",
+        "color4": "#9C4A29"
+    },
+    {
+        "id":1,
+        "color1": "#DD84A1",
+        "color2": "#FFBBBE",
+        "color3": "#FDF8E8",
+        "color4": "#CBE3B3"
+    },
+    {
+        "id":2,
+        "color1": "#FA376C",
+        "color2": "#FFA780",
+        "color3": "#FAF8E0",
+        "color4": "#9BEEC1"
+    },
+    {
+        "id":3,
+        "color1": "#13A699",
+        "color2": "#FFD708",
+        "color3": "#FFF7ED",
+        "color4": "#AAF0D1"
+    }
+]
