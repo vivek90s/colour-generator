@@ -82,6 +82,12 @@
    transform: rotate(180deg);
 }
 
+/* .icon {
+  display: inline-block;
+  stroke-width: 0;
+  fill: white;
+} */
+
 .copied {
 
     position: fixed;

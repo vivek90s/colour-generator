@@ -2,9 +2,19 @@ const refresh = document.getElementById("refresh")
 const colorDivs = document.getElementsByClassName("color")
 const copied = document.getElementById("copied")
 
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("/SW.js")
+      .then((reg) => console.log("service worker registered"))
+      .catch((err) => console.log("service worker not registered", err));
+  }
+
 // set color of divs on first load event
 window.onload = async function() {
 
+    
+    
+    
     const color = await fetchColor()
     let i = 1
     for(let item of colorDivs) {
@@ -18,7 +28,10 @@ window.onload = async function() {
 // onclick event iterate over the divs and set background color
 refresh.addEventListener('click', async (event) => {
 
-    const color = await fetchColor()
+    const colors = JSON.parse(localStorage.getItem("colors"))
+    const random = Math.floor(Math.random() * colors.length)
+
+    const color = colors[random]
     let i = 1
 
     
@@ -52,6 +65,8 @@ const fetchColor = async () => {
 
     const response = await fetch('colors.json')
     colors = await response.json()
+
+    localStorage.setItem('colors', JSON.stringify(colors))
 
     const random = Math.floor(Math.random() * colors.length)
 
