@@ -3,20 +3,31 @@ const colorDivs = document.getElementsByClassName("color")
 const copied = document.getElementById("copied")
 
 // set color of divs on first load event
-window.onload = function() {
+window.onload = async function() {
+
+    const color = await fetchColor()
+    let i = 1
     for(let item of colorDivs) {
-        const bgColor = '#' + Math.random().toString(16).substr(2, 6)
+        const bgColor = color["color"+i]
         item.style.backgroundColor = bgColor;
         item.childNodes[1].innerText = bgColor
+        i = i + 1
     }
 }
 
 // onclick event iterate over the divs and set background color
-refresh.addEventListener('click', (event) => {
+refresh.addEventListener('click', async (event) => {
+
+    const color = await fetchColor()
+    let i = 1
+
+    
+
     for(let item of colorDivs) {
-        const bgColor = '#' + Math.random().toString(16).substr(2, 6)
+        const bgColor = color["color"+i]
         item.style.backgroundColor = bgColor;
         item.childNodes[1].innerText = bgColor
+        i = i + 1
     }
 })
 
@@ -32,4 +43,17 @@ for(let item of colorDivs) {
             alert(err)
         })
     })
+}
+
+const fetchColor = async () => {
+
+    // fetch colors data from colors.json file
+    let colors
+
+    const response = await fetch('colors.json')
+    colors = await response.json()
+
+    const random = Math.floor(Math.random() * colors.length)
+
+    return colors[random]
 }
