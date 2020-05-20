@@ -50,13 +50,17 @@ for(let item of colorDivs) {
         
         navigator.clipboard.writeText(color)
         .then(() => {
-            copied.classList.add("show")
-            alert("Copied")
+            copied.classList.add("fade-in")
+            setTimeout( () => {
+                copied.classList.remove("fade-in")
+            } , 3000)
         }).catch((err) => {
             alert(err)
         })
     })
 }
+
+
 
 const fetchColor = async () => {
 
@@ -72,3 +76,7 @@ const fetchColor = async () => {
 
     return colors[random]
 }
+
+function doAdelay(){
+    setTimeout(function(){return true;},10000);
+};
