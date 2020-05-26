@@ -1,7 +1,6 @@
 *{
   margin: 0;
   padding: 0;
-  outline: none;
 }
 /* --------------- nav --------------------- */
 
@@ -234,12 +233,13 @@ main h1{
 /* ---------------------Contact------------------------- */
 
 .contact{
-  height: 100vh;
+  height: 95vh;
   padding: 0%;
   margin: 0%;
 }
 .contact h1{
- margin-top: 3.5em;
+ margin-top: 3em;
+ margin-bottom: 1em;
  font-size: 35px;
  text-align: center;
  font-family: 'Poppins', sans-serif;
@@ -278,7 +278,7 @@ input[type=submit] {
   color: white;
   padding: 12px 0px;
   border: none;
-  border-radius: 4px;
+  border-radius: 7px 7px 7px 7px;
   cursor: pointer;
   font-size: 20px;
   font-family: 'poppins' , sans-serif;
@@ -308,7 +308,6 @@ footer{
   color: whitesmoke;
   background-color: #444444;
 }
-
 .container-4 h2{
    font-size: 35px;
    font-weight: 600;
@@ -319,6 +318,14 @@ footer{
 
 .container-4 a{
    margin: 1.5em 1em;
+}
+
+.container-4 p{
+  font-size: 20px;
+  font-family: 'poppins' , sans-serif;
+  text-align: center;
+  margin-top: 2em;
+  color: rgb(104, 103, 103);
 }
 
 .container-4 .social{
@@ -337,47 +344,67 @@ footer{
 @media (max-width: 650px) {
  
   header {
-    height: 85vh;
+    height: 120vh;
     padding: 0%;
     margin: 0%;
  }
-
-.container-1 h2 {
-    color: #444444;
-    font-size: 30px;
-    font-family: 'Poppins', sans-serif;
-    margin-left: 10px;
-   
-}
-.container-1 p {
-    color: #444444;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    margin-left: 10px; 
-    opacity: 0.8; 
-    margin-bottom: 2em; 
+ 
+ header .container-1{
+     display: flex;
+     flex-direction: column-reverse;
+     justify-content: space-around;
+ }
+ .container-1 h2 {
+     color: #444444;
+     font-size: 25px;
+     font-family: 'Poppins', sans-serif;
+     padding: 0 1.3em;
+     padding-bottom: 10px ;
     
-}
-.container-1 button {
-  background-color: #444;
-  border: none;
-  padding: 18px 60px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 13px;
-  clip-path: polygon(0% 0%, 5% 100%, 87% 88%, 99% 90%, 94% 4%);
-  outline: none;
-  border-radius: 4px;
-  font-size: 22px;
-  font-family: 'Poppins', sans-serif;  
-  font-weight: 600;
-  transition: all 0.5s ease;
-}
-.container-1 img {
-  display: none;
-}
+ }
+ .container-1 p {
+     color: #444444;
+     font-size: 17px;
+     font-family: 'Poppins', sans-serif;  
+     padding: 0 2em;    
+ }
 
+ .container-1 button {
+   background-color: #444;
+   border: none;
+   padding: 19px 55px;
+   margin-left: 33%;
+   margin-top: 13px;
+   clip-path: polygon(0% 0%, 5% 100%, 87% 88%, 99% 90%, 94% 4%);
+   outline: none;
+   border-radius: 4px;
+   font-size: 22px;
+   font-family: 'Poppins', sans-serif;  
+   font-weight: 600;
+   transition: all 0.5s ease;
+   outline: none;
+   
+ }
+ 
+ .container-1 a {
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+ }
+ .container-1 button:hover {
+   clip-path: polygon(12% 2%, 1% 87%, 10% 80%, 88% 90%, 94% 4%);
+    box-shadow: 0 0 7px 0 rgb(150, 150, 150, 0.7);
+    opacity: 0.9;
+ }
+ .container-1 img {
+  
+     width: 300px;
+     height: 300px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 1em;
+ 
+ }
 /* ------------------ head ends ---------------------- */
 
 
@@ -399,8 +426,8 @@ footer{
 }
 .card {
 background-color: rgb(245, 245, 245);
-width: 80%;
-height: 100%;
+width: 90%;
+height: 95vh;
 transition: all 0.4s ease;
 border-radius: 12px;
 display: block;
@@ -433,7 +460,9 @@ margin-bottom: 3em;
  transition: all 0.5s ease-in-out;
  font-size: 15px;
  font-weight: 400;
+ outline: none;
 }
+
 .card button:hover{
   opacity: 0.9;
   transform: translateY(-5%);
@@ -443,6 +472,7 @@ margin-bottom: 3em;
   color: white;
   font-weight: 550;
   font-family: 'Poppins', sans-serif;
+  outline: none;
 }
 
 /* ------------------ contact ends ---------------------- */
@@ -504,11 +534,14 @@ input[type=submit] {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 350px!important;
+  outline: none;
 }
 
 /* When moving the mouse over the submit button, add a light color */
 input[type=submit]:hover {
  opacity: 0.9;
+ width: 300px!important;
 }
 .container-3 label {
    font-size: 20px;
@@ -517,12 +550,14 @@ input[type=submit]:hover {
    margin-left: 1.5em;
 }
 .container-3 input {
-  width: 300px;
+  width: 90%;
 }
 
 
 /* --------------------- form ends --------------------- */
-
+footer{
+  position: absolute;
+}
 }
 
 
