@@ -373,7 +373,6 @@ footer{
    background-color: #444;
    border: none;
    padding: 19px 55px;
-   margin-left: 33%;
    margin-top: 13px;
    clip-path: polygon(0% 0%, 5% 100%, 87% 88%, 99% 90%, 94% 4%);
    outline: none;
@@ -383,6 +382,9 @@ footer{
    font-weight: 600;
    transition: all 0.5s ease;
    outline: none;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
    
  }
  
@@ -403,6 +405,7 @@ footer{
      margin-left: auto;
      margin-right: auto;
      margin-top: 1em;
+     margin-bottom: 0;
  
  }
 /* ------------------ head ends ---------------------- */
@@ -555,9 +558,6 @@ input[type=submit]:hover {
 
 
 /* --------------------- form ends --------------------- */
-footer{
-  position: absolute;
-}
 }
 
 
