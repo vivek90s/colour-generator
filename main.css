@@ -65,7 +65,7 @@ nav {
   transition: all 0.3s ease;
 }
 .show-links {
-  height: 5.2rem;
+  height: 7.8rem;
 }
 @media screen and (min-width: 800px) {
   .nav-center {
@@ -198,7 +198,22 @@ nav {
     transition: 0.4s linear;
 }
 
+.save {
 
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  font-size: 15px ;
+  color: rgb(233, 233, 233);
+  background-color: black;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s linear;
+}
 
 .refresh:hover {
 
@@ -225,7 +240,7 @@ nav {
 }
 
 .fade-in {
-  animation: fadeIn ease-in-out 2.5s;
+  animation: fadeIn ease-in-out 2s;
 }
 
 @keyframes fadeIn {
@@ -248,15 +263,45 @@ nav {
     display: none;
     visibility: hidden;
   }
+ 
 }
 
 
+.saved {
+
+  position: fixed;
+  bottom: 50%;
+  display: block;
+  color: #fff;
+  background-color: #000;
+  padding: 10px 25px;
+  min-width: 280px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 10px 0 10px 0;
+  box-shadow: 5px 5px 3px 0px rgba( 0, 0 ,0 , 0.09) ;
+  font-size: 13px;
+  outline: none;
+  margin-left: 40%;
+  visibility: hidden;
+}
 
  /* ---------------- Responsive ---------------- */
 
  @media screen and (max-width: 800px )  {
-     .color{
-         flex: 100%;
+
+  .save {
+    left: 20px ;
+  }
+
+  .color-container { 
+    display: flex;
+    flex-direction: column;
+}
+  
+  
+  .color{
+         height: 5vh;
      }
 
      .color button {
@@ -266,11 +311,19 @@ nav {
         margin-left: 40% ;
         }
      .copied {   
-      margin-left: 30%;
+        margin-left: 30%;
         min-width: 250px;
         font-size: 10px;
-    
+        outline: none;
+        bottom: 50px;
      }
+     .saved {   
+      margin-left: 35%;
+      min-width: 250px;
+      font-size: 10px;
+      outline: none;
+      bottom: 50%;
+   }
      .search-box {
       background-color: #2f3640;
       height: 40%;
@@ -287,7 +340,7 @@ nav {
       color: #fff;
       transition: 0.4s ease;
       line-height: 20px;
-      width: 180px;
+      width: 160px;
     }
 
     .btn {
@@ -301,8 +354,10 @@ nav {
  }
 
  @media screen and (max-width: 500px){
-    
-    .color button {
+  .save {
+    left: 20px ;
+  }
+  .color button {
 
       font-size: 15px;
       font-weight: 500;
@@ -312,8 +367,13 @@ nav {
         min-width: 180px;
         font-size: 9px;
      }
+     .saved {   
+        margin-left: 25%;
+        min-width: 180px;
+        font-size: 9px;
+     }
      .refresh {
-
+        bottom: 50px;
         width: 35px;
         height: 35px;
         font-size: 13px;
@@ -353,10 +413,8 @@ nav {
  @media screen and (max-width: 320px){
     
     .color button {
-
       font-size: 10px;
       height: 20vmin;
-
     }
  }
 
