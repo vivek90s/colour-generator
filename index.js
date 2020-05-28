@@ -3,7 +3,7 @@ const colorDivs = document.getElementsByClassName("color")
 const copied = document.getElementById("copied")
 const save = document.getElementById("save")
 
-const saved = localStorage.getItem('saved') ? localStorage.getItem('saved') : []
+const saved = localStorage.getItem('saved') ? JSON.parse(localStorage.getItem('saved')) : []
 console.log(saved)
 
 if ("serviceWorker" in navigator) {
@@ -109,12 +109,14 @@ navToggle.addEventListener("click", function () {
 });
 
 save.addEventListener('click', e => {
-    //TODO: Same color may be saved twice
+    
     //TODO: Toggle Save unsave color
+
     e.preventDefault()
+    const id = document.getElementById("color-id").innerHTML
 
     const colors = {
-        id: document.getElementById("color-id").innerHTML
+        id: id
     }
     
     let i = 1
@@ -125,6 +127,12 @@ save.addEventListener('click', e => {
         i = i + 1
     
     }
-    saved.push(colors)
-    localStorage.setItem('saved', JSON.stringify(saved))
+
+    const found = saved.find(ele => ele.id === id)
+    
+    if(! found) {
+        saved.push(colors)
+        localStorage.setItem('saved', JSON.stringify(saved))
+    }
+
 })
