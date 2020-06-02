@@ -136,3 +136,13 @@ save.addEventListener('click', e => {
     }
 
 })
+
+// code to change color of bookmark if it is already saved
+
+const found = saved.find(ele => ele.id == document.getElementById("color-id").innerHTML)
+if(found) {
+    console.log(found)
+    const bookmark = document.getElementById("bookmark")
+    bookmark.style.color = "red !important"
+}
+
