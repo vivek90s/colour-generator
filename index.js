@@ -109,14 +109,12 @@ navToggle.addEventListener("click", function () {
 });
 
 save.addEventListener('click', e => {
-    
+    //TODO: Same color may be saved twice
     //TODO: Toggle Save unsave color
-
     e.preventDefault()
-    const id = document.getElementById("color-id").innerHTML
 
     const colors = {
-        id: id
+        id: document.getElementById("color-id").innerHTML
     }
     
     let i = 1
@@ -127,14 +125,8 @@ save.addEventListener('click', e => {
         i = i + 1
     
     }
-
-    const found = saved.find(ele => ele.id === id)
-    
-    if(! found) {
-        saved.push(colors)
-        localStorage.setItem('saved', JSON.stringify(saved))
-    }
-
+    saved.push(colors)
+    localStorage.setItem('saved', JSON.stringify(saved))
 })
 
 // code to change color of bookmark if it is already saved
