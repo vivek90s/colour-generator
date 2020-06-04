@@ -128,8 +128,68 @@ nav {
 /* --------------- nav ends--------------------- */
 
 
+/* ------------------ saved popup ------------------- */
+
+.saved-container  {
+  position: absolute;
+  width: 27%;
+  height: 20em;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+   box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
+   z-index: 1;
+   margin: auto;
+   left:40%;
+   margin-top: .5em;
+   visibility: hidden;
+}
+
+ .pallete-input {
+  width: 300px;
+  padding: 12px; 
+  color: #444;
+  border: none; 
+  border-radius: 4px;
+  font-size: 17px;
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px;
+  resize: vertical ;
+  font-family: 'Montserrat' , sans-serif;
+}
+
+input[type=submit ] , input[type=reset ] {
+  background-color: #444444;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: 'Montserrat' , sans-serif;
+  transition: all 0.4s ease;
+  margin: 1em ;
+}
+ 
+input[type=submit ]:hover {
+     opacity: 0.7;
+}
+
+input[type=reset ]:hover {
+  opacity: 0.7;
+}
+.saved-container h2  {
+    font-size: 25px;
+    color: #2f3640!important;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1em 0;
+}
+/* ------------------ saved popup ends ------------------- */
+
 .color-container{
-   
+    z-index: -1;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -284,6 +344,7 @@ nav {
   outline: none;
   margin-left: 40%;
   visibility: hidden;
+  cursor: pointer;
 }
 
  /* ---------------- Responsive ---------------- */
@@ -350,6 +411,47 @@ nav {
      text-align: center;
     }
   
+/* ------------------ saved popup ------------------- */
+  
+.saved-container  {
+  position: absolute;
+  width: 16em;
+  height: 12em;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+   box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
+   z-index: 1;
+   margin: auto;
+   left:33%;
+   margin-top: .5em;
+   visibility: hidden;
+}
+
+ .pallete-input {
+  width: 200px;
+  padding: 12px;
+  font-size: 10px; 
+}
+
+input[type=submit ] , input[type=reset ] {
+  background-color: #444444;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Montserrat' , sans-serif;
+  transition: all 0.4s ease;
+  margin: 1em ;
+}
+.saved-container h2  {
+    font-size: 16px;
+}
+/* ------------------ saved popup ends ------------------- */
+
  
  }
 
@@ -409,6 +511,45 @@ nav {
       width: 130px;
       padding: 0 3px;
     }
+
+    
+.saved-container  {
+  position: absolute;
+  width: 16em;
+  height: 12em;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+   box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
+   z-index: 1;
+   margin: auto;
+   left:25%;
+   margin-top: .5em;
+   visibility: hidden;
+}
+
+ .pallete-input {
+  width: 200px;
+  padding: 12px;
+  font-size: 10px; 
+}
+
+input[type=submit ] , input[type=reset ] {
+  background-color: #444444;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Montserrat' , sans-serif;
+  transition: all 0.4s ease;
+  margin: 1em ;
+}
+.saved-container h2  {
+    font-size: 16px;
+}
  }
  @media screen and (max-width: 320px){
     

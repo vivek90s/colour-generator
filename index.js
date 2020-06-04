@@ -4,7 +4,7 @@ const copied = document.getElementById("copied")
 const save = document.getElementById("save")
 
 const saved = localStorage.getItem('saved') ? JSON.parse(localStorage.getItem('saved')) : []
-console.log(saved)
+console.log(saved) 
 
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker
