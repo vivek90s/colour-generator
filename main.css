@@ -189,7 +189,7 @@ input[type=reset ]:hover {
 /* ------------------ saved popup ends ------------------- */
 
 .color-container{
-    z-index: -1;
+    /* z-index: -1; */
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -344,6 +344,7 @@ input[type=reset ]:hover {
   outline: none;
   margin-left: 40%;
   visibility: hidden;
+  cursor: pointer;
 }
 
  /* ---------------- Responsive ---------------- */
