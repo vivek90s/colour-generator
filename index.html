@@ -2,18 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    
-    <title>Colorify</title>
-    <link rel="shortcut icon" href="./favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <title>Colorify</title>
+  <link rel="shortcut icon" href="./favicon.png">
 </head>
 
 <body>
+<<<<<<< HEAD
       <!-- ------------------ Nav ------------------- -->
       <nav>
         <div class="nav-center">
@@ -42,6 +44,19 @@
               <a href="./save.html">Favourites</a>
             </li>
           </ul>
+=======
+  <!-- ------------------ Nav ------------------- -->
+  <nav>
+    <div class="nav-center">
+      <!-- nav header -->
+      <div class="nav-header">
+        <a href="/"><img src="./logo.svg" class="logo" alt="logo" style="cursor: pointer;"></a>
+        <div class="search-box">
+          <input class="input-box" type="text" placeholder="search" name="">
+          <a class="btn" href="#">
+            <i class="fas fa-search"></i>
+          </a>
+>>>>>>> e48bad029544dfe59c43d993de6c6e1c7489f0fe
         </div>
       </nav>
     <!-- ------------------ Nav ends ------------------- -->
@@ -92,20 +107,67 @@
             style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M54.42188,21.5l10.52604,14.33333h28.21875c23.82357,0 43,19.17643 43,43v28.66667h-21.5l28.66667,39.19271l28.66667,-39.19271h-21.5v-28.66667c0,-31.57813 -25.75521,-57.33333 -57.33333,-57.33333zM28.66667,25.30729l-28.66667,39.19271h21.5v28.66667c0,31.57813 25.75521,57.33333 57.33333,57.33333h38.74479l-10.52604,-14.33333h-28.21875c-23.82357,0 -43,-19.17643 -43,-43v-28.66667h21.5z"></path></g></g></svg>
         </button>
 
-        <div class="saved" id="saved">
-          Color pallete has been saved!
-      </div>
-
-        <div class="copied" id="copied">
-            The colour is copied to clipboard!
-        </div>
+  <!-- <div class="color-container">
+    <div class="color">
+      <button class="color-hex">
+        #00000
+      </button>
+    </div>
+    <div class="color">
+      <button class="color-hex">
+        #00000
+      </button>
+    </div>
+    <div class="color">
+      <button class="color-hex">
+        #00000
+      </button>
+    </div>
+    <div class="color">
+      <button class="color-hex">
+        #00000
+      </button>
     </div>
 
+    <button class="save " id="save">
+      <i class=" fas fa-bookmark" id="bookmark"></i>
+    </button>
+    <button class="refresh " id="refresh">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172"
+        style=" fill:#000000;">
+        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+          stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+          font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+          <path d="M0,172v-172h172v172z" fill="none"></path>
+          <g fill="#ffffff">
+            <path
+              d="M54.42188,21.5l10.52604,14.33333h28.21875c23.82357,0 43,19.17643 43,43v28.66667h-21.5l28.66667,39.19271l28.66667,-39.19271h-21.5v-28.66667c0,-31.57813 -25.75521,-57.33333 -57.33333,-57.33333zM28.66667,25.30729l-28.66667,39.19271h21.5v28.66667c0,31.57813 25.75521,57.33333 57.33333,57.33333h38.74479l-10.52604,-14.33333h-28.21875c-23.82357,0 -43,-19.17643 -43,-43v-28.66667h21.5z">
+            </path>
+          </g>
+        </g>
+      </svg>
+    </button> -->
+
+    <div class="saved" id="saved">
+      Color pallete has been saved!
+    </div>
+
+<<<<<<< HEAD
     <div id="color-id"></div>
 
     <!-- ------------ color-container ends ------------ -->
     
     <script src="index.js"></script>
+=======
+    <div class="copied" id="copied">
+      The colour is copied to clipboard!
+    </div>
+  </div>
+
+  <!-- ------------ color-container ends ------------ -->
+
+  <script src="index.js"></script>
+>>>>>>> e48bad029544dfe59c43d993de6c6e1c7489f0fe
 </body>
 
 </html>

@@ -344,6 +344,7 @@ input[type=reset ]:hover {
   outline: none;
   margin-left: 40%;
   visibility: hidden;
+  cursor: pointer;
 }
 
  /* ---------------- Responsive ---------------- */
