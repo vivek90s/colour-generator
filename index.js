@@ -3,8 +3,8 @@ const colorDivs = document.getElementsByClassName("color")
 const copied = document.getElementById("copied")
 const save = document.getElementById("save")
 
-const saved = localStorage.getItem('saved') ? JSON.parse(localStorage.getItem('saved')) : []
-console.log(saved) 
+const saved = localStorage.getItem('saved') ? localStorage.getItem('saved') : []
+console.log(saved)
 
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker
@@ -128,13 +128,3 @@ save.addEventListener('click', e => {
     saved.push(colors)
     localStorage.setItem('saved', JSON.stringify(saved))
 })
-
-// code to change color of bookmark if it is already saved
-
-const found = saved.find(ele => ele.id == document.getElementById("color-id").innerHTML)
-if(found) {
-    console.log(found)
-    const bookmark = document.getElementById("bookmark")
-    bookmark.style.color = "red !important"
-}
-
