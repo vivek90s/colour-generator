@@ -1,10 +1,6 @@
 const refresh = document.getElementById("refresh")
 const colorDivs = document.getElementsByClassName("color")
 const copied = document.getElementById("copied")
-const save = document.getElementById("save")
-
-const saved = localStorage.getItem('saved') ? localStorage.getItem('saved') : []
-console.log(saved)
 
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker
@@ -27,8 +23,6 @@ window.onload = async function() {
         item.childNodes[1].innerText = bgColor
         i = i + 1
     }
-    
-    document.getElementById("color-id").innerHTML = color["id"]
 }
 
 // onclick event iterate over the divs and set background color
@@ -48,8 +42,6 @@ refresh.addEventListener('click', async (event) => {
         item.childNodes[1].innerText = bgColor
         i = i + 1
     }
-
-    document.getElementById("color-id").innerHTML = color["id"]
 })
 
 for(let item of colorDivs) {
@@ -108,23 +100,3 @@ navToggle.addEventListener("click", function () {
   links.classList.toggle("show-links");
 });
 
-save.addEventListener('click', e => {
-    //TODO: Same color may be saved twice
-    //TODO: Toggle Save unsave color
-    e.preventDefault()
-
-    const colors = {
-        id: document.getElementById("color-id").innerHTML
-    }
-    
-    let i = 1
-    for(let item of colorDivs) {
-        
-        
-        colors["color"+i] =  item.childNodes[1].innerText
-        i = i + 1
-    
-    }
-    saved.push(colors)
-    localStorage.setItem('saved', JSON.stringify(saved))
-})
