@@ -47,11 +47,13 @@
     <!-- ------------------ Nav ends ------------------- -->
     
     <!-- -------------------- saved popup ------------------- -->
-        <div class="saved-container">
+        <div class="saved-container" id="popup">
             <h2>Name your pallete </h2>
-            <input class="pallete-input" type="text" name="pallete" placeholder="Name your pallete.." required></br>
-               <input class="favourites" type="submit" value="Add to favourites">
-               <input class="cancel" type="reset" value="Cancel">   
+            <form action="" id="popup__form">
+              <input class="pallete-input" type="text" name="pallete" placeholder="Name your pallete.." id="popup__name" required></br>
+               <input class="favourites" type="submit" value="Add to favourites" id="popup__add">
+               <input class="cancel" type="reset" value="Cancel" id="popup__cancel">  
+            </form> 
         </div>
     <!-- -------------------- saved popup ends ------------------- -->
 
@@ -99,11 +101,13 @@
         <div class="copied" id="copied">
             The colour is copied to clipboard!
         </div>
+        <div id="color-id" style="display: none;"></div>
     </div>
 
     <!-- ------------ color-container ends ------------ -->
     
     <script src="index.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popmotion/8.7.1/popmotion.global.min.js"></script>
 </body>
 
 </html>

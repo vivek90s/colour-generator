@@ -3,6 +3,11 @@ const colorDivs = document.getElementsByClassName("color")
 const copied = document.getElementById("copied")
 const save = document.getElementById("save")
 
+// popup selectors
+const popup = document.getElementById("popup")
+const cancel = document.getElementById("popup__cancel")
+const add = document.getElementById("popup__add")
+
 const saved = localStorage.getItem('saved') ? JSON.parse(localStorage.getItem('saved')) : []
 console.log(saved)
 
@@ -96,30 +101,34 @@ function doAdelay(){
 const navToggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".links");
 
-navToggle.addEventListener("click", function () {
-  // console.log(links.classList);
-  // console.log(links.classList.contains("random"));
-  // console.log(links.classList.contains("links"));
-  // if (links.classList.contains("show-links")) {
-  //   links.classList.remove("show-links");
-  // } else {
-  //   links.classList.add("show-links");
-  // }
-  links.classList.toggle("show-links");
-});
+navToggle.addEventListener("click", () => links.classList.toggle("show-links") );
 
 save.addEventListener('click', e => {
     
     //TODO: Toggle Save unsave color
 
     e.preventDefault()
+
+    popup.style.display = "block"
+
+    
+
+})
+
+add.addEventListener("click", (e) => {
+    
+    e.preventDefault()
+    const name = document.getElementById("popup__name").value 
+    console.log(name)
+
     const id = document.getElementById("color-id").innerHTML
 
     const colors = {
-        id: id
+        id: id,
+        name: name
     }
     
-    let i = 1
+    let i = 1 
     for(let item of colorDivs) {
         
         
@@ -135,4 +144,13 @@ save.addEventListener('click', e => {
         localStorage.setItem('saved', JSON.stringify(saved))
     }
 
+    document.getElementById("popup__form").reset();
+
+    popup.style.display = "none"
+})
+
+
+
+cancel.addEventListener("click", e => {
+    popup.style.display = "none";
 })
