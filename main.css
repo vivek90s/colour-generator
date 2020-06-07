@@ -338,6 +338,7 @@ input[type=reset ]:hover {
   font-size: 13px;
   outline: none;
   margin-left: 40%;
+  z-index: 101;
   visibility: hidden;
 }
 

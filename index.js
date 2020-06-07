@@ -2,6 +2,7 @@ const refresh = document.getElementById("refresh")
 const colorDivs = document.getElementsByClassName("color")
 const copied = document.getElementById("copied")
 const save = document.getElementById("save")
+const showSavedMessage = document.getElementById("saved")
 
 // popup selectors
 const popup = document.getElementById("popup")
@@ -9,30 +10,29 @@ const cancel = document.getElementById("popup__cancel")
 const add = document.getElementById("popup__add")
 
 const saved = localStorage.getItem('saved') ? JSON.parse(localStorage.getItem('saved')) : []
-console.log(saved)
 
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker
-      .register("/SW.js")
-      .then((reg) => console.log("service worker registered"))
-      .catch((err) => console.log("service worker not registered", err));
-  }
+        .register("/SW.js")
+        .then((reg) => console.log("service worker registered"))
+        .catch((err) => console.log("service worker not registered", err));
+}
 
 // set color of divs on first load event
-window.onload = async function() {
+window.onload = async function () {
 
-    
-    
-    
+
+
+
     const color = await fetchColor()
     let i = 1
-    for(let item of colorDivs) {
-        const bgColor = color["color"+i]
+    for (let item of colorDivs) {
+        const bgColor = color["color" + i]
         item.style.backgroundColor = bgColor;
         item.childNodes[1].innerText = bgColor
         i = i + 1
     }
-    
+
     document.getElementById("color-id").innerHTML = color["id"]
 }
 
@@ -45,10 +45,10 @@ refresh.addEventListener('click', async (event) => {
     const color = colors[random]
     let i = 1
 
-    
 
-    for(let item of colorDivs) {
-        const bgColor = color["color"+i]
+
+    for (let item of colorDivs) {
+        const bgColor = color["color" + i]
         item.style.backgroundColor = bgColor;
         item.childNodes[1].innerText = bgColor
         i = i + 1
@@ -57,19 +57,19 @@ refresh.addEventListener('click', async (event) => {
     document.getElementById("color-id").innerHTML = color["id"]
 })
 
-for(let item of colorDivs) {
+for (let item of colorDivs) {
     item.addEventListener('click', event => {
         const color = item.childNodes[1].innerText
-        
+
         navigator.clipboard.writeText(color)
-        .then(() => {
-            copied.classList.add("fade-in")
-            setTimeout( () => {
-                copied.classList.remove("fade-in")
-            } , 3000)
-        }).catch((err) => {
-            alert(err)
-        })
+            .then(() => {
+                copied.classList.add("fade-in")
+                setTimeout(() => {
+                    copied.classList.remove("fade-in")
+                }, 3000)
+            }).catch((err) => {
+                alert(err)
+            })
     })
 }
 
@@ -90,8 +90,8 @@ const fetchColor = async () => {
     return colors[random]
 }
 
-function doAdelay(){
-    setTimeout(function(){return true;},1000);
+function doAdelay() {
+    setTimeout(function () { return true; }, 1000);
 };
 
 
@@ -101,25 +101,24 @@ function doAdelay(){
 const navToggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".links");
 
-navToggle.addEventListener("click", () => links.classList.toggle("show-links") );
+navToggle.addEventListener("click", () => links.classList.toggle("show-links"));
 
 save.addEventListener('click', e => {
-    
+
     //TODO: Toggle Save unsave color
 
     e.preventDefault()
 
     popup.style.display = "block"
 
-    
+
 
 })
 
 add.addEventListener("click", (e) => {
-    
+
     e.preventDefault()
-    const name = document.getElementById("popup__name").value 
-    console.log(name)
+    const name = document.getElementById("popup__name").value
 
     const id = document.getElementById("color-id").innerHTML
 
@@ -127,19 +126,19 @@ add.addEventListener("click", (e) => {
         id: id,
         name: name
     }
-    
-    let i = 1 
-    for(let item of colorDivs) {
-        
-        
-        colors["color"+i] =  item.childNodes[1].innerText
+
+    let i = 1
+    for (let item of colorDivs) {
+
+
+        colors["color" + i] = item.childNodes[1].innerText
         i = i + 1
-    
+
     }
 
     const found = saved.find(ele => ele.id === id)
-    
-    if(! found) {
+
+    if (!found) {
         saved.push(colors)
         localStorage.setItem('saved', JSON.stringify(saved))
     }
@@ -147,6 +146,10 @@ add.addEventListener("click", (e) => {
     document.getElementById("popup__form").reset();
 
     popup.style.display = "none"
+    showSavedMessage.classList.add("fade-in")
+    setTimeout(() => {
+        copied.classList.remove("fade-in")
+    }, 3000)
 })
 
 
