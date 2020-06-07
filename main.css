@@ -139,11 +139,11 @@ nav {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
    box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
-   z-index: 1;
+   z-index: 100;
    margin: auto;
    left:40%;
    margin-top: .5em;
-   visibility: hidden;
+   display: none;
 }
 
  .pallete-input {
