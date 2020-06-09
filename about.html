@@ -15,6 +15,14 @@
 </head>
 
 <body>
+
+
+  <div id="preloader">
+    <div class="load">
+      <hr/><hr/><hr/><hr/>
+    </div>
+ </div>
+
     <!-- ------------------ Nav ------------------- -->
     <nav>
         <div class="nav-center">
@@ -104,7 +112,7 @@
       <h2>Wanna say something?</br>
       Write your message in form.</h2>
     </div>
-    <form action="mailto:viv281999@gmail.com" method="post" enctype="text/plain">
+    <form action="mailto:viv28199@gmail.com" method="get" enctype="text/plain">
 
       <label for="fname" > Name</label></br>
       <input type="text" name="name" placeholder="Your name.." required></br>
@@ -140,6 +148,16 @@
   </footer>
 </main>
     <script >
+
+// --------------preloader--------------
+
+var overlay = document.getElementById("preloader");
+window.addEventListener('load', function(){
+overlay.style.display = 'none';
+})
+
+// --------------preloader ends--------------
+
     //Toggle in Nav
 
 const navToggle = document.querySelector(".nav-toggle");

@@ -6,6 +6,45 @@
   font-family: 'Montserrat', sans-serif;
   outline: none;
 }
+
+/* -------------------preloader----------------- */
+
+#preloader{
+  background-color: #ECF0F1;
+  height: 100vh;
+  width: 100%; 
+  position: absolute;
+  z-index: 98;
+}
+.load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+  /*change these sizes to fit into your project*/
+  width:100px;
+  height:100px;
+  z-index: 99;
+  
+}
+.load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+
+.load :first-child{background:#19A68C;animation-delay:-1.5s}
+.load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+.load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+.load :last-child{background:#193B48}
+
+@keyframes spin{
+  0%,100%{transform:translate(0)}
+  25%{transform:translate(160%)}
+  50%{transform:translate(160%, 160%)}
+  75%{transform:translate(0, 160%)}
+}
+@keyframes fadeIn{
+  0%{ }
+  25%{ opacity: 1;}
+  50%{opacity: 1}
+  75%{opacity: 0.8;}
+  100%{opacity: 0;}
+}
+
+/* -------------------preloader ends----------------- */
 /* --------------- nav --------------------- */
 
 ul {
@@ -67,7 +106,7 @@ nav {
 .show-links {
   height: 7.8rem;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1060px) {
   .nav-center {
     max-width: 1170px;
     margin: 0 auto;
@@ -95,6 +134,7 @@ nav {
     background: transparent;
   }
 }
+
 /* -----------------------search-box----------------- */
 .search-box {
   background-color: #2f3640;
@@ -133,7 +173,7 @@ nav {
 .saved-container  {
   position: absolute;
   width: 27%;
-  height: 20em;
+  height: 18em;
   background-color: whitesmoke;
   border-radius: 10px;
   font-family: 'Montserrat', sans-serif;
@@ -141,9 +181,20 @@ nav {
    box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
    z-index: 1;
    margin: auto;
-   left:40%;
-   margin-top: .5em;
-   visibility: hidden;
+   left:37%;
+   top: -400px;  
+   animation: drop 0.8s ease-in forwards;
+   
+}
+
+@keyframes drop{
+  0%{ opacity: 0;}
+  70%{transform: translateY(490px); opacity: 0; 
+    box-shadow: 20px 20px 10px 0px rgba(50, 30, 30, 0.2);
+  }
+  100%{transform: translateY(470px); opacity: 1;
+    box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2)
+  }
 }
 
  .pallete-input {
@@ -152,12 +203,13 @@ nav {
   color: #444;
   border: none; 
   border-radius: 4px;
-  font-size: 17px;
+  font-size: 13px;
   box-sizing: border-box; 
   margin-top: 6px; 
   margin-bottom: 16px;
   resize: vertical ;
   font-family: 'Montserrat' , sans-serif;
+  box-shadow:  0 3px 3px rgba(0,0,0,0.16), 0 3px 3px rgba(0,0,0,0.23);
 }
 
 input[type=submit ] , input[type=reset ] {
@@ -167,7 +219,7 @@ input[type=submit ] , input[type=reset ] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 15px;
   font-family: 'Montserrat' , sans-serif;
   transition: all 0.4s ease;
   margin: 1em ;
@@ -181,7 +233,7 @@ input[type=reset ]:hover {
   opacity: 0.7;
 }
 .saved-container h2  {
-    font-size: 25px;
+    font-size: 21px;
     color: #2f3640!important;
     font-family: 'Montserrat', sans-serif;
     padding: 1em 0;
@@ -291,7 +343,7 @@ input[type=reset ]:hover {
     font-size: 13px;
     outline: none;
     margin-left: 40%;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .fade-in {
@@ -338,12 +390,12 @@ input[type=reset ]:hover {
   font-size: 13px;
   outline: none;
   margin-left: 40%;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
  /* ---------------- Responsive ---------------- */
 
- @media screen and (max-width: 800px )  {
+ @media screen and (max-width: 800px ) {
 
   .save {
     left: 20px ;
@@ -419,8 +471,15 @@ input[type=reset ]:hover {
    z-index: 1;
    margin: auto;
    left:33%;
-   margin-top: .5em;
-   visibility: hidden;
+   top: -400px;  
+   animation: drop 0.4s ease-in forwards;
+   /* visibility: hidden; */
+}
+
+@keyframes drop{
+  0%{ opacity: 0;}
+  70%{transform: translateY(520px); opacity: 0;}
+  100%{transform: translateY(470px); opacity: 1; }
 }
 
  .pallete-input {
@@ -447,6 +506,123 @@ input[type=submit ] , input[type=reset ] {
 /* ------------------ saved popup ends ------------------- */
 
  
+ }
+
+ 
+ @media screen and (max-width: 1200px ) {
+
+  .save {
+    left: 20px ;
+  }
+
+  .color-container { 
+    display: flex;
+    flex-direction: column;
+}
+  
+  
+  .color{
+         height: 5vh;
+     }
+
+     .color button {
+
+        width: 30%;
+        height: 25%;
+        margin-left: 40% ;
+        }
+     .copied {   
+        margin-left: 30%;
+        min-width: 250px;
+        font-size: 10px;
+        outline: none;
+        bottom: 50px;
+     }
+     .saved {   
+      margin-left: 35%;
+      min-width: 250px;
+      font-size: 10px;
+      outline: none;
+      bottom: 50%;
+   }
+     .search-box {
+      background-color: #2f3640;
+      height: 40%;
+      border-radius: 5px;
+      padding: 8px;
+      margin-left: 0;
+    }
+    .input-box {
+      background: none;
+      border: none;
+      float: left;
+      font-size: 16px;
+      padding: 0;
+      color: #fff;
+      transition: 0.4s ease;
+      line-height: 20px;
+      width: 160px;
+    }
+
+    .btn {
+     color: #eee;
+     float: right;
+     text-decoration: none;
+     text-align: center;
+    }
+  
+/* ------------------ saved popup ------------------- */
+  
+.saved-container  {
+  position: absolute;
+  width: 16em;
+  height: 12em;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+   box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
+   z-index: 1;
+   margin: auto;
+   left:33%;
+   top: -400px;  
+   animation: drop 0.8s ease-in forwards;
+   /* visibility: hidden; */
+}
+
+@keyframes drop{
+  0%{ opacity: 0;}
+  70%{transform: translateY(480px); opacity: 0; 
+    box-shadow: 20px 20px 10px 0px rgba(50, 30, 30, 0.2);
+  }
+  100%{transform: translateY(470px); opacity: 1;
+    box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2)
+  }
+}
+
+ .pallete-input {
+  width: 200px;
+  padding: 12px;
+  font-size: 10px; 
+}
+
+input[type=submit ] , input[type=reset ] {
+  background-color: #444444;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Montserrat' , sans-serif;
+  transition: all 0.4s ease;
+  margin: 1em ;
+}
+.saved-container h2  {
+    font-size: 16px;
+}
+/* ------------------ saved popup ends ------------------- */
+
  }
 
  @media screen and (max-width: 500px){
@@ -510,7 +686,7 @@ input[type=submit ] , input[type=reset ] {
 .saved-container  {
   position: absolute;
   width: 16em;
-  height: 12em;
+  height: 11em;
   background-color: whitesmoke;
   border-radius: 10px;
   font-family: 'Montserrat', sans-serif;
@@ -519,15 +695,21 @@ input[type=submit ] , input[type=reset ] {
    z-index: 1;
    margin: auto;
    left:25%;
-   margin-top: .5em;
-   visibility: hidden;
+   top: -400px;  
+   animation: drop 0.8s ease-in forwards;
+   /* visibility: hidden; */
 }
 
- .pallete-input {
-  width: 200px;
-  padding: 12px;
-  font-size: 10px; 
+@keyframes drop{
+  0%{ opacity: 0;}
+  70%{transform: translateY(475px); opacity: 0; 
+    box-shadow: 20px 20px 10px 0px rgba(50, 30, 30, 0.2);
+  }
+  100%{transform: translateY(470px); opacity: 1;
+    box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2)
+  }
 }
+
 
 input[type=submit ] , input[type=reset ] {
   background-color: #444444;
@@ -536,7 +718,7 @@ input[type=submit ] , input[type=reset ] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 10px;
   font-family: 'Montserrat' , sans-serif;
   transition: all 0.4s ease;
   margin: 1em ;
@@ -552,9 +734,35 @@ input[type=submit ] , input[type=reset ] {
       height: 20vmin;
     }
  }
-
+ @media (max-width: 1200px) {
+  .search-box {
+    background-color: #2f3640;
+    height: 40%;
+    border-radius: 5px;
+    padding: 8px;
+    margin-left: 23em;
+  }
+}
+@media (max-width: 800px) {
+  .search-box {
+    background-color: #2f3640;
+    height: 40%;
+    border-radius: 5px;
+    padding: 8px;
+    margin-left: 13em;
+  }
+}
+@media (max-width: 620px) {
+  .search-box {
+    background-color: #2f3640;
+    height: 40%;
+    border-radius: 5px;
+    padding: 8px;
+    margin-left: 3em;
+  }
+}
  
-@media (min-width: 1024px) {
+@media (min-width: 1060px) {
   nav button,
   .responsive-nav {
     display: none;
@@ -569,6 +777,64 @@ input[type=submit ] , input[type=reset ] {
     font-size: 72.5%;
   }
   
+}
+
+@media screen and (min-width: 1024px) {
+  
+  .saved-container  {
+    position: absolute;
+    width: 22em;
+    height: 15em;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+     box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
+     z-index: 1;
+     margin: auto;
+     left:40%;
+     top: -400px;  
+     animation: drop 0.8s ease-in forwards;
+     /* visibility: hidden; */
+}
+}
+@media screen and (min-width: 1056px) {
+  
+  .saved-container  {
+    position: absolute;
+    width: 22em;
+    height: 15em;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+     box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
+     z-index: 1;
+     margin: auto;
+     left:40%;
+     top: -400px;  
+     animation: drop 0.8s ease-in forwards;
+     /* visibility: hidden; */
+}
+}
+
+@media screen and (min-width: 1200px) {
+  
+  .saved-container  {
+    position: absolute;
+  width: 27%;
+  height: 18em;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+   box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
+   z-index: 1;
+   margin: auto;
+   left:37%;
+   top: -400px;  
+     /* visibility: hidden; */
+}
 }
 
   /* ---------------- Responsive ends ---------------- */

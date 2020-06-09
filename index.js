@@ -136,3 +136,11 @@ save.addEventListener('click', e => {
     }
 
 })
+// --------------preloader--------------
+
+var overlay = document.getElementById("preloader");
+window.addEventListener('load', function(){
+overlay.style.display = 'none';
+})
+
+// --------------preloader ends--------------

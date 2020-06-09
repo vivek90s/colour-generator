@@ -15,6 +15,13 @@
 </head>
 
 <body>
+
+  <div id="preloader">
+    <div class="load">
+      <hr/><hr/><hr/><hr/>
+    </div>
+ </div>
+
   <!-- ------------------ Nav ------------------- -->
   <nav>
     <div class="nav-center">
@@ -59,6 +66,16 @@
   </main>
   <!-- -------------------------container ends----------------------- -->
   <script>
+
+    // --------------preloader--------------
+
+var overlay = document.getElementById("preloader");
+window.addEventListener('load', function(){
+overlay.style.display = 'none';
+})
+
+// --------------preloader ends--------------
+
     //Toggle in Nav
 
     const navToggle = document.querySelector(".nav-toggle");

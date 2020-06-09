@@ -3,6 +3,45 @@
   padding: 0;
   outline: none;
 }
+
+/* -------------------preloader----------------- */
+
+#preloader{
+  background-color: #ECF0F1;
+  height: 100vh;
+  width: 100%; 
+  position: absolute;
+  z-index: 999998;
+}
+.load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+  /*change these sizes to fit into your project*/
+  width:100px;
+  height:100px;
+  z-index: 999999;
+  
+}
+.load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+
+.load :first-child{background:#19A68C;animation-delay:-1.5s}
+.load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+.load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+.load :last-child{background:#193B48}
+
+@keyframes spin{
+  0%,100%{transform:translate(0)}
+  25%{transform:translate(160%)}
+  50%{transform:translate(160%, 160%)}
+  75%{transform:translate(0, 160%)}
+}
+@keyframes fadeIn{
+  0%{ }
+  25%{ opacity: 1;}
+  50%{opacity: 1}
+  75%{opacity: 0.8;}
+  100%{opacity: 0;}
+}
+
+/* -------------------preloader ends----------------- */
 /* --------------- nav --------------------- */
 
 ul {
@@ -98,7 +137,7 @@ ul {
   
 /* -------------------header-------------------------- */
 header {
-   height: 85vh;
+   height: 96vh;
    padding: 0%;
    margin: 0%;
 }
@@ -122,13 +161,14 @@ header .container-1{
     font-size: 18px;
     font-family: 'Poppins', sans-serif;  
     margin-bottom: 2em; 
+    opacity: 0.9;
     
 }
 .container-1 button {
   background-color: #444;
   border: none;
-  padding: 23px 70px;
-  margin-left: 33%;
+  padding: 18px 57px;
+  margin-left: 25%;
   margin-top: 13px;
   clip-path: polygon(0% 0%, 5% 100%, 87% 88%, 99% 90%, 94% 4%);
   outline: none;
@@ -188,7 +228,7 @@ main h1{
 .card {
  background-color: rgb(245, 245, 245);
  width: 70vmin;
- height: 90vmin;
+ height: 94vmin;
  transition: all 0.4s ease;
  border-radius: 12px;
 }
@@ -243,6 +283,7 @@ main h1{
  font-size: 35px;
  text-align: center;
  font-family: 'Poppins', sans-serif;
+ margin-bottom: 1.5em;
 }
 
 .container-3 {
@@ -283,12 +324,16 @@ input[type=submit] {
   font-size: 20px;
   font-family: 'poppins' , sans-serif;
   transition: all 0.4s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
 /* When moving the mouse over the submit button, add a light color */
 input[type=submit]:hover {
  opacity: 0.9;
+ width: 300px;
 }
 .container-3 label {
    font-size: 25px;
@@ -304,18 +349,22 @@ input[type=submit]:hover {
 
 /* ---------------------- footer-------------------- */
 footer{
-  height: 40vh;
+  min-height: 40%;
   width: 100%;
   color: whitesmoke;
   background-color: #444444;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  bottom: auto;
 }
-
 .container-4 h2{
    font-size: 35px;
    font-weight: 600;
    text-align: center;
    padding-top: 1em;
    font-family: 'poppins' , sans-serif;
+
 }
 
 .container-4 a{
@@ -341,7 +390,7 @@ footer{
 
 
 /* -----------------------responsive-------------------- */
-@media (max-width: 650px) {
+@media (max-width: 800px) {
  
   header {
     height: 120vh;
@@ -359,7 +408,7 @@ header .container-1{
     font-size: 30px;
     font-family: 'Poppins', sans-serif;
     margin-left: 1em;
-   
+    text-align: center;
 }
 .container-1 p {
     color: #444444;
@@ -368,7 +417,7 @@ header .container-1{
     margin-left: 1.6em; 
     opacity: 0.8; 
     margin-bottom: 3em; 
-    
+    text-align: center;  
 }
 .container-1 button {
   background-color: #444;
@@ -417,6 +466,205 @@ header .container-1{
 .card {
 background-color: rgb(245, 245, 245);
 width: 90%;
+height: 100%;
+transition: all 0.4s ease;
+border-radius: 12px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 3em;
+}
+.card:hover {
+ box-shadow: 0px 10px 1px #ddd, 0 10px 20px #ccc;
+}
+.card h3{
+ font-family: 'Poppins', sans-serif;
+ text-align: center;
+ color: #444444;
+ font-size: 25px;
+}
+.card button{
+ margin: 4vmin 0;
+ background-color: #444444;
+ padding: 3vmin 6vmin;
+ border: none;
+ color: white;
+ clip-path: polygon(0% 0%, 5% 100%, 99% 100%, 94% 4%);
+ border-radius: 8px 0 8px 0;
+ width: 45vmin;
+ height: 10vmin;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ transition: all 0.5s ease-in-out;
+ font-size: 15px;
+ font-weight: 400;
+}
+.card button:hover{
+  opacity: 0.9;
+  transform: translateY(-5%);
+}
+
+.card button a{
+  color: white;
+  font-weight: 550;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ------------------ contact ends ---------------------- */
+
+/* --------------------- form --------------------- */
+
+.contact h1{
+  margin-top: 2em;
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+ }
+ 
+ .container-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 82vh;
+ }
+ .text h2{
+  font-size: 25px ;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 7px;
+  margin-left: 0.7em;
+  display: none;
+}
+.text p{
+  font-size: 23px ;
+  font-family: 'Poppins', sans-serif;
+  display: none;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px;
+  resize: vertical ;
+  margin-left: 1.5em;
+}
+input[type=text] {
+  width: 90%!important;
+}
+ textarea {
+  width: 90%;
+}
+
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #444444;
+  clip-path: polygon(0% 0%, 5% 100%, 99% 100%, 94% 4%);
+  color: white;
+  padding: 8px 0px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'poppins' , sans-serif;
+  transition: all 0.4s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* When moving the mouse over the submit button, add a light color */
+input[type=submit]:hover {
+ opacity: 0.9;
+}
+.container-3 label {
+   font-size: 20px;
+   font-family: 'poppins' , sans-serif;
+   font-weight: 500;
+   margin-left: 1.5em;
+}
+.container-3 input {
+  width: 300px;
+}
+
+
+/* --------------------- form ends --------------------- */
+
+}
+@media (max-width: 1060px) {
+ 
+  header {
+    height: 80vh;
+    padding: 0%;
+    margin: 0%;
+ }
+
+.container-1 h2 {
+    color: #444444;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 1em;
+    margin-top: 2em;
+   
+}
+.container-1 p {
+    color: #444444;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 1.6em; 
+    opacity: 0.8; 
+    margin-bottom: 3em; 
+    
+}
+.container-1 button {
+  background-color: #444;
+  border: none;
+  padding: 15px 45px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 13px;
+  clip-path: polygon(0% 0%, 5% 100%, 87% 88%, 99% 90%, 94% 4%);
+  outline: none;
+  border-radius: 4px;
+  font-size: 19px;
+  font-family: 'Poppins', sans-serif;  
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+.container-1 img {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+/* ------------------ head ends ---------------------- */
+
+/* ------------------ contact ---------------------- */
+.container-2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.card img{
+   width: 200px;
+   height: 200px; 
+   border-radius: 50%;
+   padding-top: 2em;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+.card {
+background-color: rgb(245, 245, 245);
+width: 70%;
 height: 100%;
 transition: all 0.4s ease;
 border-radius: 12px;
