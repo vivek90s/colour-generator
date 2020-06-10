@@ -53,15 +53,9 @@ ul {
 a {
   text-decoration: none;
 }
-img:not(.logo) {
-  width: 100%;
-}
-img {
-  display: block;
-}
-
 nav {
   background:white;
+  width: 100%;
 }
 .nav-header {
   display: flex;
@@ -80,9 +74,15 @@ nav {
 .nav-toggle:hover {
   transform: rotate(90deg);
 }
-.logo {
-  height: 40px;
+
+
+.logo1 {
+  height: 60px;
+  margin-left: 2em;
+  padding: 0;
+  display: none;
 }
+
 .links a {
   color: black;
   font-family: 'Montserrat' , sans-serif;
@@ -106,7 +106,7 @@ nav {
 .show-links {
   height: 7.8rem;
 }
-@media screen and (min-width: 1060px) {
+@media screen and (min-width: 1200px) {
   .nav-center {
     max-width: 1170px;
     margin: 0 auto;
@@ -134,14 +134,13 @@ nav {
     background: transparent;
   }
 }
-
 /* -----------------------search-box----------------- */
 .search-box {
   background-color: #2f3640;
   height: 40%;
   border-radius: 5px;
   padding: 8px;
-  margin-left: 23em;
+  margin-left: 18em;
 }
 .input-box {
   background: none;
@@ -163,7 +162,6 @@ nav {
   font-size: 15px;
  }
 
-/* -----------------------search-box ends----------------- */
 
 /* --------------- nav ends--------------------- */
 
@@ -174,7 +172,7 @@ nav {
   position: absolute;
   width: 27%;
   height: 18em;
-  background-color: whitesmoke;
+  background: linear-gradient(#f5f7fa , #b8c6db);
   border-radius: 10px;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
@@ -184,7 +182,7 @@ nav {
    left:37%;
    top: -400px;  
    animation: drop 0.8s ease-in forwards;
-   
+   visibility: hidden;
 }
 
 @keyframes drop{
@@ -343,7 +341,7 @@ input[type=reset ]:hover {
     font-size: 13px;
     outline: none;
     margin-left: 40%;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .fade-in {
@@ -390,12 +388,32 @@ input[type=reset ]:hover {
   font-size: 13px;
   outline: none;
   margin-left: 40%;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
  /* ---------------- Responsive ---------------- */
 
- @media screen and (max-width: 800px ) {
+
+ 
+
+  @media screen and (max-width: 800px ) {
+      
+    .nav-header {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      height: 40px;
+      display: none;
+    }
+    
+    .logo1 {
+      height: 50px;
+      width: 50px;
+      display: block;
+    }
 
   .save {
     left: 20px ;
@@ -436,7 +454,6 @@ input[type=reset ]:hover {
       height: 40%;
       border-radius: 5px;
       padding: 8px;
-      margin-left: 0;
     }
     .input-box {
       background: none;
@@ -456,10 +473,13 @@ input[type=reset ]:hover {
      text-decoration: none;
      text-align: center;
     }
+   
+.refresh {
+    right: 40px;
+}
+
   
-/* ------------------ saved popup ------------------- */
-  
-.saved-container  {
+ .saved-container  {
   position: absolute;
   width: 16em;
   height: 12em;
@@ -471,12 +491,13 @@ input[type=reset ]:hover {
    z-index: 1;
    margin: auto;
    left:33%;
-   top: -400px;  
-   animation: drop 0.4s ease-in forwards;
+   top: -400px;
+   
+   animation: drop 0.4s ease-in forwards; 
    /* visibility: hidden; */
-}
+ } 
 
-@keyframes drop{
+ @keyframes drop{
   0%{ opacity: 0;}
   70%{transform: translateY(520px); opacity: 0;}
   100%{transform: translateY(470px); opacity: 1; }
@@ -502,14 +523,14 @@ input[type=submit ] , input[type=reset ] {
 }
 .saved-container h2  {
     font-size: 16px;
-}
+} 
 /* ------------------ saved popup ends ------------------- */
 
  
- }
+  } 
 
- 
- @media screen and (max-width: 1200px ) {
+
+ @media screen and (max-width: 1200px ) and (min-width: 802px ) {
 
   .save {
     left: 20px ;
@@ -559,7 +580,6 @@ input[type=submit ] , input[type=reset ] {
       font-size: 16px;
       padding: 0;
       color: #fff;
-      transition: 0.4s ease;
       line-height: 20px;
       width: 160px;
     }
@@ -570,7 +590,7 @@ input[type=submit ] , input[type=reset ] {
      text-decoration: none;
      text-align: center;
     }
-  
+   
 /* ------------------ saved popup ------------------- */
   
 .saved-container  {
@@ -586,9 +606,9 @@ input[type=submit ] , input[type=reset ] {
    margin: auto;
    left:33%;
    top: -400px;  
-   animation: drop 0.8s ease-in forwards;
+   animation: drop 0.8s ease-in forwards; 
    /* visibility: hidden; */
-}
+ }
 
 @keyframes drop{
   0%{ opacity: 0;}
@@ -620,15 +640,35 @@ input[type=submit ] , input[type=reset ] {
 }
 .saved-container h2  {
     font-size: 16px;
-}
+} 
 /* ------------------ saved popup ends ------------------- */
-
- }
+ 
+  } 
 
  @media screen and (max-width: 500px){
+  
+  .nav-header {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+  }
+
+  .logo {
+    height: 40px;
+    display: none;
+  }
+  
+  .logo1 {
+    height: 50px;
+    width: 50px;
+    display: block;
+  }
+  
+
   .save {
     left: 20px ;
   }
+ 
   .color button {
 
       font-size: 15px;
@@ -667,7 +707,7 @@ input[type=submit ] , input[type=reset ] {
       color: #fff;
       transition: 0.4s ease;
       line-height: 20px;
-      width: 0;
+      width: 105px;
     }
 
     .btn {
@@ -677,10 +717,7 @@ input[type=submit ] , input[type=reset ] {
      text-align: center;
      transition: all 0.3s linear;
     }
-    .search-box:hover .input-box {
-      width: 130px;
-      padding: 0 3px;
-    }
+  
 
     
 .saved-container  {
@@ -696,8 +733,8 @@ input[type=submit ] , input[type=reset ] {
    margin: auto;
    left:25%;
    top: -400px;  
-   animation: drop 0.8s ease-in forwards;
-   /* visibility: hidden; */
+   animation: drop 0.8s ease-in forwards; 
+   visibility: hidden;
 }
 
 @keyframes drop{
@@ -727,7 +764,7 @@ input[type=submit ] , input[type=reset ] {
     font-size: 16px;
 }
  }
- @media screen and (max-width: 320px){
+  @media screen and (max-width: 320px){
     
     .color button {
       font-size: 10px;
@@ -794,9 +831,9 @@ input[type=submit ] , input[type=reset ] {
      margin: auto;
      left:40%;
      top: -400px;  
-     animation: drop 0.8s ease-in forwards;
+     animation: drop 0.8s ease-in forwards; 
      /* visibility: hidden; */
-}
+ }
 }
 @media screen and (min-width: 1056px) {
   
@@ -813,9 +850,9 @@ input[type=submit ] , input[type=reset ] {
      margin: auto;
      left:40%;
      top: -400px;  
-     animation: drop 0.8s ease-in forwards;
+     animation: drop 0.8s ease-in forwards; 
      /* visibility: hidden; */
-}
+ }
 }
 
 @media screen and (min-width: 1200px) {
@@ -832,10 +869,10 @@ input[type=submit ] , input[type=reset ] {
    z-index: 1;
    margin: auto;
    left:37%;
-   top: -400px;  
+   top: -400px;   
      /* visibility: hidden; */
-}
-}
+ }
+} 
 
   /* ---------------- Responsive ends ---------------- */
 
