@@ -80,6 +80,13 @@ ul {
   .logo {
     height: 40px;
   }
+  .logo1 {
+    height: 60px;
+    margin-left: 2em;
+    padding: 0;
+    display: none;
+  }
+  
   .links a {
     color: black;
     font-family: 'Montserrat' , sans-serif;
@@ -402,6 +409,17 @@ header {
     margin: 0%;
  }
  
+ .logo {
+  height: 40px;
+  display: none;
+}
+.logo1 {
+  height: 60px;
+  margin-left: 2em;
+  padding: 0;
+  display: block;
+}
+
 header .container-1{
   display: flex;
   flex-direction: column-reverse;

@@ -82,6 +82,13 @@
   .logo {
     height: 40px;
   }
+  .logo1 {
+    height: 60px;
+    margin-left: 2em;
+    padding: 0;
+    display: none;
+  }
+  
   .links a {
     color: black;
     font-family: 'Montserrat' , sans-serif;
@@ -139,6 +146,7 @@
   .container {
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
   .anime {
 
@@ -205,7 +213,18 @@
          padding: 0;
          height: 100vh;
     }
-  
+    
+    .logo {
+      height: 40px;
+      display: none;
+    }
+    .logo1 {
+      height: 60px;
+      margin-left: 2em;
+      padding: 0;
+      display: block;
+    }
+
       .container h1{
           text-align: center;
           color: #252525;

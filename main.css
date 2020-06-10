@@ -173,7 +173,7 @@ nav {
   width: 27%;
   height: 18em;
   background: linear-gradient(#f5f7fa , #b8c6db);
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
    box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
@@ -182,6 +182,10 @@ nav {
    left:37%;
    top: -400px;  
    animation: drop 0.8s ease-in forwards;
+   -moz-animation: drop 0.8s ease-in forwards;
+   -webkit-animation: drop 0.8s ease-in forwards;
+   -ms-animation: drop 0.8s ease-in forwards;
+   
    visibility: hidden;
 }
 
@@ -190,7 +194,7 @@ nav {
   70%{transform: translateY(490px); opacity: 0; 
     box-shadow: 20px 20px 10px 0px rgba(50, 30, 30, 0.2);
   }
-  100%{transform: translateY(470px); opacity: 1;
+  100%{transform: translateY(486px); opacity: 1;
     box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2)
   }
 }
@@ -219,16 +223,18 @@ input[type=submit ] , input[type=reset ] {
   cursor: pointer;
   font-size: 15px;
   font-family: 'Montserrat' , sans-serif;
-  transition: all 0.4s ease;
+  transition: all 0.4s linear;
   margin: 1em ;
 }
  
 input[type=submit ]:hover {
-     opacity: 0.7;
+  background-color: white;
+  color: #444444;
 }
 
 input[type=reset ]:hover {
-  opacity: 0.7;
+  background-color: white;
+  color: #444444;
 }
 .saved-container h2  {
     font-size: 21px;
@@ -267,7 +273,6 @@ input[type=reset ]:hover {
 
     bottom: 20%;
     position: absolute;
-   
     text-align: center;
     font-size: 20px;
     letter-spacing: 2px;
@@ -346,6 +351,10 @@ input[type=reset ]:hover {
 
 .fade-in {
   animation: fadeIn ease-in-out 2s;
+  -webkit-animation: fadeIn ease-in-out 2s;
+  -ms-animation: fadeIn ease-in-out 2s;
+  -moz-animation: fadeIn ease-in-out 2s;
+  
 }
 
 @keyframes fadeIn {
@@ -405,7 +414,7 @@ input[type=reset ]:hover {
     }
 
     .logo {
-      height: 40px;
+      height: 20px;
       display: none;
     }
     
@@ -478,54 +487,6 @@ input[type=reset ]:hover {
     right: 40px;
 }
 
-  
- .saved-container  {
-  position: absolute;
-  width: 16em;
-  height: 12em;
-  background-color: whitesmoke;
-  border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-   box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
-   z-index: 1;
-   margin: auto;
-   left:33%;
-   top: -400px;
-   
-   animation: drop 0.4s ease-in forwards; 
-   /* visibility: hidden; */
- } 
-
- @keyframes drop{
-  0%{ opacity: 0;}
-  70%{transform: translateY(520px); opacity: 0;}
-  100%{transform: translateY(470px); opacity: 1; }
-}
-
- .pallete-input {
-  width: 200px;
-  padding: 12px;
-  font-size: 10px; 
-}
-
-input[type=submit ] , input[type=reset ] {
-  background-color: #444444;
-  color: white;
-  padding: 10px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  font-family: 'Montserrat' , sans-serif;
-  transition: all 0.4s ease;
-  margin: 1em ;
-}
-.saved-container h2  {
-    font-size: 16px;
-} 
-/* ------------------ saved popup ends ------------------- */
-
  
   } 
 
@@ -590,58 +551,6 @@ input[type=submit ] , input[type=reset ] {
      text-decoration: none;
      text-align: center;
     }
-   
-/* ------------------ saved popup ------------------- */
-  
-.saved-container  {
-  position: absolute;
-  width: 16em;
-  height: 12em;
-  background-color: whitesmoke;
-  border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-   box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
-   z-index: 1;
-   margin: auto;
-   left:33%;
-   top: -400px;  
-   animation: drop 0.8s ease-in forwards; 
-   /* visibility: hidden; */
- }
-
-@keyframes drop{
-  0%{ opacity: 0;}
-  70%{transform: translateY(480px); opacity: 0; 
-    box-shadow: 20px 20px 10px 0px rgba(50, 30, 30, 0.2);
-  }
-  100%{transform: translateY(470px); opacity: 1;
-    box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2)
-  }
-}
-
- .pallete-input {
-  width: 200px;
-  padding: 12px;
-  font-size: 10px; 
-}
-
-input[type=submit ] , input[type=reset ] {
-  background-color: #444444;
-  color: white;
-  padding: 10px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  font-family: 'Montserrat' , sans-serif;
-  transition: all 0.4s ease;
-  margin: 1em ;
-}
-.saved-container h2  {
-    font-size: 16px;
-} 
-/* ------------------ saved popup ends ------------------- */
  
   } 
 
@@ -719,50 +628,7 @@ input[type=submit ] , input[type=reset ] {
     }
   
 
-    
-.saved-container  {
-  position: absolute;
-  width: 16em;
-  height: 11em;
-  background-color: whitesmoke;
-  border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-   box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
-   z-index: 1;
-   margin: auto;
-   left:25%;
-   top: -400px;  
-   animation: drop 0.8s ease-in forwards; 
-   visibility: hidden;
-}
-
-@keyframes drop{
-  0%{ opacity: 0;}
-  70%{transform: translateY(475px); opacity: 0; 
-    box-shadow: 20px 20px 10px 0px rgba(50, 30, 30, 0.2);
-  }
-  100%{transform: translateY(470px); opacity: 1;
-    box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2)
-  }
-}
-
-
-input[type=submit ] , input[type=reset ] {
-  background-color: #444444;
-  color: white;
-  padding: 10px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 10px;
-  font-family: 'Montserrat' , sans-serif;
-  transition: all 0.4s ease;
-  margin: 1em ;
-}
-.saved-container h2  {
-    font-size: 16px;
-}
+ 
  }
   @media screen and (max-width: 320px){
     
@@ -816,63 +682,164 @@ input[type=submit ] , input[type=reset ] {
   
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 600px) and (min-width: 360px) {
+ 
   
-  .saved-container  {
-    position: absolute;
-    width: 22em;
-    height: 15em;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-     box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
-     z-index: 1;
-     margin: auto;
-     left:40%;
-     top: -400px;  
-     animation: drop 0.8s ease-in forwards; 
-     /* visibility: hidden; */
- }
-}
-@media screen and (min-width: 1056px) {
-  
-  .saved-container  {
-    position: absolute;
-    width: 22em;
-    height: 15em;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-     box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
-     z-index: 1;
-     margin: auto;
-     left:40%;
-     top: -400px;  
-     animation: drop 0.8s ease-in forwards; 
-     /* visibility: hidden; */
- }
-}
-
-@media screen and (min-width: 1200px) {
-  
-  .saved-container  {
-    position: absolute;
-  width: 27%;
-  height: 18em;
-  background-color: whitesmoke;
-  border-radius: 10px;
+.saved-container  {
+  position: absolute;
+  width: 50%;
+  height: 11em;
+  background: linear-gradient(#f5f7fa , #b8c6db);
+  border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
    box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
    z-index: 1;
    margin: auto;
-   left:37%;
-   top: -400px;   
-     /* visibility: hidden; */
- }
-} 
+   left:25%;
+   top: -400px;  
+   animation: drop 0.8s ease-in forwards;
+   visibility: hidden;
+}
+
+@keyframes drop{
+  0%{ opacity: 0;}
+  70%{transform: translateY(490px); opacity: 0; 
+    box-shadow: 20px 20px 10px 0px rgba(50, 30, 30, 0.2);
+  }
+  100%{transform: translateY(486px); opacity: 1;
+    box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2)
+  }
+}
+
+ .pallete-input {
+  width: 160px;
+  padding: 9px; 
+  color: #444;
+  border: none; 
+  border-radius: 4px;
+  font-size: 13px;
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px;
+  resize: vertical ;
+  font-family: 'Montserrat' , sans-serif;
+  box-shadow:  0 3px 3px rgba(0,0,0,0.16), 0 3px 3px rgba(0,0,0,0.23);
+}
+
+input[type=submit ] , input[type=reset ] {
+  background-color: #444444;
+  color: white;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  font-family: 'Montserrat' , sans-serif;
+  transition: all 0.4s linear;
+  margin: 1em ;
+}
+ 
+input[type=submit ]:hover {
+  background-color: white;
+  color: #444444;
+}
+
+input[type=reset ]:hover {
+  background-color: white;
+  color: #444444;
+}
+.saved-container h2  {
+    font-size: 16px;
+    color: #2f3640!important;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1em 0;
+}
+/* ------------------ saved popup ends ------------------- */
+
+
+}
+
+
+
+@media screen and (max-width: 1200px) and (min-width: 601px) {
+ 
+  
+  .saved-container  {
+    position: absolute;
+    width: 20em;
+    height: 12em;
+    background: linear-gradient(#f5f7fa , #b8c6db);
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+     box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2);
+     z-index: 1;
+     margin: auto;
+     left:33%;
+     top: -400px;  
+     animation: drop 0.8s ease-in forwards;
+     visibility: hidden;
+  }
+  
+  @keyframes drop{
+    0%{ opacity: 0;}
+    70%{transform: translateY(490px); opacity: 0; 
+      box-shadow: 20px 20px 10px 0px rgba(50, 30, 30, 0.2);
+    }
+    100%{transform: translateY(486px); opacity: 1;
+      box-shadow: 4px 4px 10px 0px rgba(50, 30, 30, 0.2)
+    }
+  }
+  
+   .pallete-input {
+    width: 200px;
+    padding: 9px; 
+    color: #444;
+    border: none; 
+    border-radius: 4px;
+    font-size: 13px;
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical ;
+    font-family: 'Montserrat' , sans-serif;
+    box-shadow:  0 3px 3px rgba(0,0,0,0.16), 0 3px 3px rgba(0,0,0,0.23);
+  }
+  
+  input[type=submit ] , input[type=reset ] {
+    background-color: #444444;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: 'Montserrat' , sans-serif;
+    transition: all 0.4s linear;
+    margin: 1em ;
+  }
+   
+  input[type=submit ]:hover {
+    background-color: white;
+    color: #444444;
+  }
+  
+  input[type=reset ]:hover {
+    background-color: white;
+    color: #444444;
+  }
+  .saved-container h2  {
+      font-size: 16px;
+      color: #2f3640!important;
+      font-family: 'Montserrat', sans-serif;
+      padding: 1em 0;
+  }
+  /* ------------------ saved popup ends ------------------- */
+  
+  
+  }
+  
 
   /* ---------------- Responsive ends ---------------- */
 
