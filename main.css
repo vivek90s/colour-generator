@@ -484,7 +484,7 @@ input[type=reset ]:hover {
     }
    
 .refresh {
-    right: 40px;
+    right: 20px;
 }
 
  
@@ -568,7 +568,7 @@ input[type=reset ]:hover {
   }
   
   .logo1 {
-    height: 50px;
+    height: 45px;
     width: 50px;
     display: block;
   }
@@ -616,7 +616,7 @@ input[type=reset ]:hover {
       color: #fff;
       transition: 0.4s ease;
       line-height: 20px;
-      width: 105px;
+      width: 130px;
     }
 
     .btn {

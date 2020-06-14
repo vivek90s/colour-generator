@@ -81,7 +81,7 @@ ul {
     height: 40px;
   }
   .logo1 {
-    height: 60px;
+    height: 50px;
     margin-left: 2em;
     padding: 0;
     display: none;
@@ -414,7 +414,7 @@ header {
   display: none;
 }
 .logo1 {
-  height: 60px;
+  height: 50px;
   margin-left: 2em;
   padding: 0;
   display: block;
