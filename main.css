@@ -575,3 +575,9 @@ input[type=submit ] , input[type=reset ] {
   /* ---------------- Responsive ends ---------------- */
 
 
+/******* code for toggle save unsave ****/
+
+
+.pallete_saved {
+  color: darkslateblue !important;
+}

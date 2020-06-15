@@ -4,6 +4,8 @@ const copied = document.getElementById("copied")
 const save = document.getElementById("save")
 const showSavedMessage = document.getElementById("saved")
 
+const colorId = document.getElementById("color-id")
+
 // popup selectors
 const popup = document.getElementById("popup")
 const cancel = document.getElementById("popup__cancel")
@@ -43,6 +45,7 @@ refresh.addEventListener('click', async (event) => {
     const random = Math.floor(Math.random() * colors.length)
 
     const color = colors[random]
+    alert(color.id)
     let i = 1
 
 
@@ -148,7 +151,7 @@ add.addEventListener("click", (e) => {
     popup.style.display = "none"
     showSavedMessage.classList.add("fade-in")
     setTimeout(() => {
-        copied.classList.remove("fade-in")
+        showSavedMessage.classList.remove("fade-in")
     }, 3000)
 })
 
@@ -157,3 +160,14 @@ add.addEventListener("click", (e) => {
 cancel.addEventListener("click", e => {
     popup.style.display = "none";
 })
+
+/* save unsave */
+const checkId = (id) => {
+    return saved.filter(x => x.id == id)
+}
+
+
+if(checkId(colorId).length > 0) {
+    
+    document.getElementById("save__button").classList.add("pallete_saved")
+}
