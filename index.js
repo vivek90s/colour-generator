@@ -143,7 +143,7 @@ save.addEventListener('click', e => {
                 pcopy.classList.add("fade-in")
                 setTimeout(() => {
                     copied.classList.remove("fade-in")
-                }, 3000)
+                }, 6000)
               })
               .catch((error) => {
                 pncopy.classList.add("fade-in")
