@@ -39,9 +39,6 @@
         <li>
           <a href="./about.html">About Us</a>
         </li>
-        <li>
-          <a href="./save.html">Favourites</a>
-        </li>
       </ul>
     </div>
   </nav>
@@ -86,8 +83,8 @@
       </button>
     </div>
 
-    <button class="save " id="save">
-      <i class=" fas fa-bookmark save__button" id="save__button"></i>
+    <button class="save " id="save" data-clipboard-target="#copydata">
+      <i class=" fas fa-share-alt save__button" id="save__button"></i>
     </button>
 
     
@@ -117,10 +114,13 @@
     <div id="color-id" style="display: none;"></div>
   </div>
 
+  <div id="copydata" style="display: none;"></div>
+
   <!-- ------------ color-container ends ------------ -->
 
   <script src="index.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popmotion/8.7.1/popmotion.global.min.js"></script>
+  <script defer src="clipboard.min.js"></script>
 </body>
 
 </html>

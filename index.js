@@ -60,6 +60,7 @@ refresh.addEventListener('click', async (event) => {
     document.getElementById("color-id").innerHTML = color["id"]
 })
 
+// copy individual colors
 for (let item of colorDivs) {
     item.addEventListener('click', event => {
         const color = item.childNodes[1].innerText
@@ -77,7 +78,7 @@ for (let item of colorDivs) {
 }
 
 
-
+// fetch colors.json file and save it to localstorage
 const fetchColor = async () => {
 
     // fetch colors data from colors.json file
@@ -106,68 +107,89 @@ const links = document.querySelector(".links");
 
 navToggle.addEventListener("click", () => links.classList.toggle("show-links"));
 
+
+// below code is to share pallete and copy to clipboard
 save.addEventListener('click', e => {
 
     //TODO: Toggle Save unsave color
 
     e.preventDefault()
 
-    popup.style.display = "block"
+    // popup.style.display = "block"
+
+    new ClipboardJS("save")
+
+    const url = window.location.href
+
+    const color0 = colorDivs[0].childNodes[1].innerText
+    const color1 = colorDivs[1].childNodes[1].innerText
+    const color2 = colorDivs[2].childNodes[1].innerText
+    const color3 = colorDivs[3].childNodes[1].innerText
+
+    const message = `Here is an awsome pallete from ${url} have a look at it 😍💖!!\n ${color0} | ${color1} | ${color2} | ${color3} ✔ \n Do check out once ${url}`
+
+
+    console.log(message)
 
 
 
 })
 
-add.addEventListener("click", (e) => {
+// below code is for popup to save pallete
 
-    e.preventDefault()
-    const name = document.getElementById("popup__name").value
+// add.addEventListener("click", (e) => {
 
-    const id = document.getElementById("color-id").innerHTML
+//     e.preventDefault()
+//     const name = document.getElementById("popup__name").value
 
-    const colors = {
-        id: id,
-        name: name
-    }
+//     const id = document.getElementById("color-id").innerHTML
 
-    let i = 1
-    for (let item of colorDivs) {
+//     const colors = {
+//         id: id,
+//         name: name
+//     }
 
-
-        colors["color" + i] = item.childNodes[1].innerText
-        i = i + 1
-
-    }
-
-    const found = saved.find(ele => ele.id === id)
-
-    if (!found) {
-        saved.push(colors)
-        localStorage.setItem('saved', JSON.stringify(saved))
-    }
-
-    document.getElementById("popup__form").reset();
-
-    popup.style.display = "none"
-    showSavedMessage.classList.add("fade-in")
-    setTimeout(() => {
-        showSavedMessage.classList.remove("fade-in")
-    }, 3000)
-})
+//     let i = 1
+//     for (let item of colorDivs) {
 
 
+//         colors["color" + i] = item.childNodes[1].innerText
+//         i = i + 1
 
-cancel.addEventListener("click", e => {
-    popup.style.display = "none";
-})
+//     }
 
-/* save unsave */
-const checkId = (id) => {
-    return saved.filter(x => x.id == id)
-}
+//     const found = saved.find(ele => ele.id === id)
+
+//     if (!found) {
+//         saved.push(colors)
+//         localStorage.setItem('saved', JSON.stringify(saved))
+//     }
+
+//     document.getElementById("popup__form").reset();
+
+//     popup.style.display = "none"
+//     showSavedMessage.classList.add("fade-in")
+//     setTimeout(() => {
+//         showSavedMessage.classList.remove("fade-in")
+//     }, 3000)
+// })
 
 
-if(checkId(colorId).length > 0) {
+
+// cancel.addEventListener("click", e => {
+//     popup.style.display = "none";
+// })
+
+// /* save unsave */
+// const checkId = (id) => {
+//     return saved.filter(x => x.id == id)
+// }
+
+
+// if(checkId(colorId).length > 0) {
     
-    document.getElementById("save__button").classList.add("pallete_saved")
-}
+//     document.getElementById("save__button").classList.add("pallete_saved")
+// }
+
+
+
