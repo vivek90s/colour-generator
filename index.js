@@ -45,7 +45,6 @@ refresh.addEventListener('click', async (event) => {
     const random = Math.floor(Math.random() * colors.length)
 
     const color = colors[random]
-    alert(color.id)
     let i = 1
 
 
@@ -129,7 +128,25 @@ save.addEventListener('click', e => {
     const message = `Here is an awsome pallete from ${url} have a look at it 😍💖!!\n ${color0} | ${color1} | ${color2} | ${color3} ✔ \n Do check out once ${url}`
 
 
-    console.log(message)
+    // code for mobile devices
+        
+
+        if (navigator.share) {
+            navigator.share({
+              title: `Color Palette from ${url}`,
+              text: message,
+              url: url,
+            })
+              .then(() => alert('Successful share'))
+              .catch((error) => alert('Error sharing', error));
+        }
+
+    
+
+    else {
+        alert('hi')
+    }
+    
 
 
 
