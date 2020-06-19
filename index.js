@@ -117,6 +117,8 @@ save.addEventListener('click', e => {
     // popup.style.display = "block"
 
     new ClipboardJS("save")
+    const pcopy = document.getElementById("pcopy")
+    const pncopy = document.getElementById("pncopy")
 
     const url = window.location.href
 
@@ -125,7 +127,7 @@ save.addEventListener('click', e => {
     const color2 = colorDivs[2].childNodes[1].innerText
     const color3 = colorDivs[3].childNodes[1].innerText
 
-    const message = `Here is an awsome pallete from ${url} have a look at it 😍💖!!\n ${color0} | ${color1} | ${color2} | ${color3} ✔ \n Do check out once ${url}`
+    const message = `Here is an awsome pallete from ${url} have a look at it 😍💖!!\n ${color0} | ${color1} | ${color2} | ${color3} ✔ \n Do check out once !!`
 
 
     // code for mobile devices
@@ -137,14 +139,35 @@ save.addEventListener('click', e => {
               text: message,
               url: url,
             })
-              .then(() => alert('Successful share'))
-              .catch((error) => alert('Error sharing', error));
+              .then(() => {
+                pcopy.classList.add("fade-in")
+                setTimeout(() => {
+                    copied.classList.remove("fade-in")
+                }, 3000)
+              })
+              .catch((error) => {
+                pncopy.classList.add("fade-in")
+                setTimeout(() => {
+                    copied.classList.remove("fade-in")
+                }, 3000)
+              });
         }
 
     
 
     else {
-        alert('hi')
+        navigator.clipboard.writeText(message)
+        .then(() => {
+            pcopy.classList.add("fade-in")
+                setTimeout(() => {
+                    copied.classList.remove("fade-in")
+                }, 3000)
+        }).catch(err => {
+            pncopy.classList.add("fade-in")
+                setTimeout(() => {
+                    copied.classList.remove("fade-in")
+                }, 3000)
+        })
     }
     
 

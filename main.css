@@ -275,7 +275,7 @@ input[type=reset ]:hover {
    transform: rotate(180deg);
 }
 
-.copied {
+.copied, .pcopy , .pncopy{
 
     position: fixed;
     bottom: 30px;
@@ -366,7 +366,7 @@ input[type=reset ]:hover {
         height: 25%;
         margin-left: 40% ;
         }
-     .copied {   
+     .copied , .pcopy, .pncopy{   
         margin-left: 30%;
         min-width: 250px;
         font-size: 10px;
@@ -459,7 +459,7 @@ input[type=submit ] , input[type=reset ] {
       font-size: 15px;
       font-weight: 500;
 }
-    .copied {   
+    .copied, .pcopy , .pncopy{   
       margin-left: 25%;
         min-width: 180px;
         font-size: 9px;
