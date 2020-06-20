@@ -233,3 +233,6 @@ save.addEventListener('click', e => {
 
 
 
+
+
+// --------------preloader ends------------

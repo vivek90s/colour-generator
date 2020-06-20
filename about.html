@@ -11,15 +11,24 @@
     
 
     <title>Colorify</title>
-    <link rel="shortcut icon" href="./favicon.png">
+    <link rel="shortcut icon" href="./Vector.svg">
 </head>
 
 <body>
+
+
+  <div id="preloader">
+    <div class="load">
+      <hr/><hr/><hr/><hr/>
+    </div>
+ </div>
+
     <!-- ------------------ Nav ------------------- -->
     <nav>
         <div class="nav-center">
           <!-- nav header -->
           <div class="nav-header">
+            <a href="/"><img src="./Vector.svg"class="logo1" alt="logo" style="cursor: pointer;"></a>
             <a href="/"><img src="./logo.svg"class="logo" alt="logo" style="cursor: pointer;"></a>
             <button class="nav-toggle">
               <img src="./menu.png"/>
@@ -50,7 +59,7 @@
            <h2>
            Checked all colors!!</br>Let's get to know more about me.  
            </h2>
-           <p>Hey! I am colorfy. I bring the best color pallets to you.</br> I am updating me with awesome colors time to time. </br>Hope these colors will add some value in your art.</p>
+           <p>Hey! I am colorfy. I bring the best color pallets to you. I am updating me with awesome colors time to time. Hope these colors will add some value in your art.</p>
            <button>
              <a href="./index.html">Explore Me</a>
            </button>
@@ -65,7 +74,7 @@
 
     <!-- ----------------------- creator ---------------------------------- -->
 <main>
-  <h1>My Creators</h1>
+  <h1 class="creator">My Creators</h1>
   <div class="container-2">
     <div class="card">
 
@@ -104,7 +113,7 @@
       <h2>Wanna say something?</br>
       Write your message in form.</h2>
     </div>
-    <form action="mailto:viv281999@gmail.com" method="post" enctype="text/plain">
+    <form action="mailto:viv28199@gmail.com" method="get" enctype="text/plain">
 
       <label for="fname" > Name</label></br>
       <input type="text" name="name" placeholder="Your name.." required></br>
@@ -140,6 +149,16 @@
   </footer>
 </main>
     <script >
+
+// --------------preloader--------------
+
+var overlay = document.getElementById("preloader");
+window.addEventListener('load', function(){
+overlay.style.display = 'none';
+})
+
+// --------------preloader ends--------------
+
     //Toggle in Nav
 
 const navToggle = document.querySelector(".nav-toggle");
