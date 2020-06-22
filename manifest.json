@@ -3,19 +3,24 @@
     "short_name": "Colorify",
     "icons": [
         {
-            "src": "loop2.svg",
-            "sizes": "92x92",
-            "type": "image/svg"
+            "src": "icons/32x32.png",
+            "sizes": "30x33",
+            "type": "image/png"
         },
         {
-            "src": "loop2.svg",
+            "src": "icons/144x144.png",
+            "sizes": "131x144",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Group 1.png",
             "sizes": "144x144",
-            "type": "image/svg"
+            "type": "image/png"
         },
         {
-            "src": "loop2.svg",
-            "sizes": "152x152",
-            "type": "image/svg"
+            "src": "icons/512x512.png",
+            "sizes": "463x509",
+            "type": "image/png"
         }        
     ],
     "start_url": "/",
