@@ -83,10 +83,14 @@ const fetchColor = async () => {
     // fetch colors data from colors.json file
     let colors
 
-    const response = await fetch('colors.json')
-    colors = await response.json()
+    try {
+        const response = await fetch('colors.json')
+        colors = await response.json()
 
-    localStorage.setItem('colors', JSON.stringify(colors))
+        localStorage.setItem('colors', JSON.stringify(colors))
+    } catch (error) {
+        const colors = localStorage.getItem('colors')
+    }
 
     const random = Math.floor(Math.random() * colors.length)
 
@@ -110,13 +114,10 @@ navToggle.addEventListener("click", () => links.classList.toggle("show-links"));
 // below code is to share pallete and copy to clipboard
 save.addEventListener('click', e => {
 
-    //TODO: Toggle Save unsave color
 
     e.preventDefault()
 
-    // popup.style.display = "block"
 
-    new ClipboardJS("save")
     const pcopy = document.getElementById("pcopy")
     const pncopy = document.getElementById("pncopy")
 
@@ -131,45 +132,45 @@ save.addEventListener('click', e => {
 
 
     // code for mobile devices
-        
 
-        if (navigator.share) {
-            navigator.share({
-              title: `Color Palette from ${url}`,
-              text: message,
-              url: url,
-            })
-              .then(() => {
+
+    if (navigator.share) {
+        navigator.share({
+            title: `Color Palette from ${url}`,
+            text: message,
+            url: url,
+        })
+            .then(() => {
                 pcopy.classList.add("fade-in")
                 setTimeout(() => {
                     copied.classList.remove("fade-in")
                 }, 6000)
-              })
-              .catch((error) => {
+            })
+            .catch((error) => {
                 pncopy.classList.add("fade-in")
                 setTimeout(() => {
                     copied.classList.remove("fade-in")
                 }, 3000)
-              });
-        }
+            });
+    }
 
-    
+
 
     else {
         navigator.clipboard.writeText(message)
-        .then(() => {
-            pcopy.classList.add("fade-in")
+            .then(() => {
+                pcopy.classList.add("fade-in")
                 setTimeout(() => {
                     copied.classList.remove("fade-in")
                 }, 3000)
-        }).catch(err => {
-            pncopy.classList.add("fade-in")
+            }).catch(err => {
+                pncopy.classList.add("fade-in")
                 setTimeout(() => {
                     copied.classList.remove("fade-in")
                 }, 3000)
-        })
+            })
     }
-    
+
 
 
 
@@ -227,9 +228,6 @@ save.addEventListener('click', e => {
 
 
 // if(checkId(colorId).length > 0) {
-    
+
 //     document.getElementById("save__button").classList.add("pallete_saved")
 // }
-
-
-

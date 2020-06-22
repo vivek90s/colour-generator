@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
   <title>Colorify</title>
   <link rel="shortcut icon" href="./favicon.png">
 </head>
@@ -19,14 +18,14 @@
   <nav>
     <div class="nav-center">
       <!-- nav header -->
-      <div class="nav-header">
-        <img src="./logo.svg" class="logo" alt="logo" />
-        <div class="search-box">
+      <div data-step="1" data-intro=" Welcome to colorify ! The world of colors" class="nav-header">
+        <img src="./logo.svg" class="logo" alt="logo"  />
+        <!-- <div class="search-box">
           <input class="input-box" type="text" placeholder="search" name="">
           <a class="btn" href="#">
             <i class="fas fa-search"></i>
           </a>
-        </div>
+        </div> -->
         <button class="nav-toggle">
           <img src="https://img.icons8.com/android/24/000000/menu.png" />
         </button>
@@ -83,7 +82,7 @@
       </button>
     </div>
 
-    <button class="save " id="save" data-clipboard-target="#copydata">
+    <button class="save " id="save">
       <i class=" fas fa-share-alt save__button" id="save__button"></i>
     </button>
 
@@ -126,7 +125,6 @@
 
   <script src="index.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popmotion/8.7.1/popmotion.global.min.js"></script>
-  <script defer src="clipboard.min.js"></script>
 </body>
 
 </html>
