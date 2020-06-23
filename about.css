@@ -80,13 +80,13 @@ ul {
   .logo {
     height: 40px;
   }
-  .logo1 {
+  /* .logo1 {
     height: 50px;
     margin-left: 2em;
     padding: 0;
     display: none;
   }
-  
+   */
   .links a {
     color: black;
     font-family: 'Montserrat' , sans-serif;
@@ -109,7 +109,7 @@ ul {
     transition: all 0.3s ease;
   }
   .show-links {
-    height: 7.8rem;
+    height: 5rem;
   }
   @media screen and (min-width: 782px) {
     .nav-center {
@@ -411,14 +411,14 @@ header {
  
  .logo {
   height: 40px;
-  display: none;
+  
 }
-.logo1 {
+/* .logo1 {
   height: 50px;
   margin-left: 2em;
   padding: 0;
   display: block;
-}
+} */
 
 header .container-1{
   display: flex;
